@@ -254,22 +254,40 @@ export default function Works() {
       </div>
 
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-12 animate-modal">
+        // 1. z-index 提升至 110，彻底压制顶部导航栏 (z-100)
+        <div className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-12 animate-modal">
           <div className="absolute inset-0 bg-[#F7F7F7]/90 cursor-pointer" onClick={() => setSelectedProject(null)}></div>
-          <div className="relative z-10 w-full max-w-6xl bg-[#111] text-[#F7F7F7] flex flex-col md:flex-row shadow-2xl">
-            <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 md:top-6 md:right-6 z-20 text-white/50 hover:text-white font-mono text-[10px] tracking-[0.2em]">[ X ]</button>
-            <div className="w-full md:w-[60%] aspect-[3/2] bg-[#1a1a1a] relative overflow-hidden">
+          
+          {/* 2. 核心修复：加入 max-h-[85vh] 和 overflow-y-auto，让内容过长时在内部优雅滑动 */}
+          <div className="relative z-10 w-full max-w-6xl max-h-[85vh] overflow-y-auto hide-scrollbar bg-[#111] text-[#F7F7F7] flex flex-col md:flex-row shadow-2xl">
+            
+            {/* 3. 移动端专属关闭按钮：增加了黑色半透明背景、加大了点击面积，再也不怕和图片融为一体 */}
+            <button 
+              onClick={() => setSelectedProject(null)} 
+              className="absolute top-3 right-3 md:top-6 md:right-6 z-20 text-white md:text-white/50 hover:text-white font-mono text-[12px] tracking-[0.2em] bg-black/40 md:bg-transparent px-4 py-2 md:p-0 backdrop-blur-md md:backdrop-blur-none rounded-sm md:rounded-none"
+            >
+              [ X ]
+            </button>
+            
+            {/* 保证图片的比例 */}
+            <div className="w-full md:w-[60%] aspect-[3/2] bg-[#1a1a1a] relative overflow-hidden shrink-0">
               <ImageCarousel key={selectedProject.id} images={selectedProject.images} isHoverable={false} />
             </div>
-            <div className="w-full md:w-[40%] p-8 md:p-12 lg:p-14 flex flex-col justify-between">
+            
+            {/* 移动端减小一点内边距 (p-6) 让文本排版更紧凑 */}
+            <div className="w-full md:w-[40%] p-6 md:p-12 lg:p-14 flex flex-col justify-between">
               <div>
                 <span className="font-mono text-white/40 text-[10px] tracking-[0.3em] mb-4 block">CASE STUDY {selectedProject.id}</span>
                 <h3 className="font-inter-black text-3xl md:text-5xl uppercase tracking-tighter mb-8 leading-[1]">{selectedProject.title}</h3>
                 <div className="mb-6"><span className="block font-mono text-[9px] text-white/40 mb-1 tracking-widest">KEYWORDS</span><span className="font-inter-bold text-white uppercase tracking-wide text-sm">{selectedProject.keywords}</span></div>
                 <div><span className="block font-mono text-[9px] text-white/40 mb-2 tracking-widest">OVERVIEW</span><p className="font-sans text-white/70 text-sm leading-relaxed max-w-sm">{selectedProject.desc}</p></div>
               </div>
-              <div className="mt-12 pt-6 border-t border-white/20 flex justify-between font-mono text-[10px] text-white/40"><span>DATE: {selectedProject.date}</span><span>STATUS: ARCHIVED</span></div>
+              <div className="mt-12 pt-6 border-t border-white/20 flex justify-between font-mono text-[10px] text-white/40">
+                <span>DATE: {selectedProject.date}</span>
+                <span>STATUS: ARCHIVED</span>
+              </div>
             </div>
+
           </div>
         </div>
       )}
