@@ -18,24 +18,22 @@ export default function Home() {
       {isLoading && <WelcomeLoader onComplete={() => setIsLoading(false)} />}
       {!isLoading && <Navbar />}
       
-      {/* 给每个区块加上 scroll-mt-32 (大约 128px 的防撞安全距离) */}
-      <div id="home" className="scroll-mt-32">
-        <Hero />
-      </div>
+      {/* 核心修复：
+        1. 删掉了所有带有 scroll-mt-32 的 div 包装，防止与 GSAP 的滚动逻辑发生不必要的冲突。
+        2. 删掉了 <Works /> 和 <Connect /> 的外层 div 包装，因为组件内部已经自带了完美的 id="works" 和 id="connect"，去掉了 HTML ID 重复的隐患。
+      */}
       
-      <div id="about-anchor" className="scroll-mt-32">
+      <Hero />
+      
+      <div id="about-anchor">
         <About />
       </div>
       
-      <div id="works" className="scroll-mt-32">
-        <Works />
-      </div>
+      <Works />
       
-      <div id="connect" className="scroll-mt-32">
-        <Connect />
-      </div>
+      <Connect />
       
-      <div id="garden" className="scroll-mt-32">
+      <div id="garden">
         <Garden />
       </div>
       
