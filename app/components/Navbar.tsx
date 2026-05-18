@@ -24,7 +24,7 @@ export default function Navbar({
             const element = document.getElementById(elementId);
             
             if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             } else if (elementId === 'home') {
               // 兜底逻辑
               window.scrollTo({ top: 0, behavior: 'smooth' });

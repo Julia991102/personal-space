@@ -69,8 +69,8 @@ export default function About() {
     // 动画 3：视差层叠覆盖转场 (保持原样，Scrub本身就是双向的)
     // ==========================================
     gsap.to('.bio-section', {
-      yPercent: 50,  
-      opacity: 0.1,  
+      yPercent: 20,  
+      opacity: 0,  
       ease: 'none',
       scrollTrigger: {
         trigger: '.bio-section',
