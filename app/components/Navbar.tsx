@@ -18,13 +18,20 @@ export default function Navbar({
         onClick={() => {
           onNavigate(section);
           
-          // 修复锚点逻辑：所有按钮都会去寻找对应的 id 并平滑滚动
           setTimeout(() => {
             const elementId = targetId || section;
             const element = document.getElementById(elementId);
             
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              // 修复核心逻辑：计算元素位置并减去 Navbar 的高度补偿
+              const navbarHeight = 96; // h-24 在 Tailwind 中等于 96px
+              const elementPosition = element.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+  
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
             } else if (elementId === 'home') {
               // 兜底逻辑
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -58,13 +65,10 @@ export default function Navbar({
   };
 
   return (
-    // bg-transparent 和 mix-blend-difference 开启智能反色
     <nav className="fixed top-0 left-0 w-full z-[100] bg-transparent mix-blend-difference pointer-events-none">
       
-      {/* 手机端完美适配：横向弹性布局 */}
       <div className="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center pointer-events-auto">
         
-        {/* 左侧 Logo */}
         <div className="flex-shrink-0 pr-4">
           <button 
             onClick={() => {
@@ -79,7 +83,6 @@ export default function Navbar({
           </button>
         </div>
         
-        {/* 中间导航：移动端改为支持横向滑动的轨道，隐藏滚动条 */}
         <div className="flex flex-1 justify-end md:justify-center gap-6 md:gap-8 lg:gap-12 overflow-x-auto hide-scrollbar pl-4">
           <NavItem section="home" targetId="about-anchor" label="ABOUT ME" />
           <NavItem section="works" targetId="works" label="WORKS" />
@@ -87,7 +90,6 @@ export default function Navbar({
           <NavItem section="garden" targetId="garden" label="GARDEN" />
         </div>
         
-        {/* 右侧占位 (仅 PC 端显示，平衡 Logo) */}
         <div className="hidden md:flex w-[100px] justify-end opacity-0 pointer-events-none whitespace-nowrap">
           <span className="font-mono text-[14px] tracking-[0.2em] text-white">[ BALANCE ]</span>
         </div>
