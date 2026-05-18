@@ -120,7 +120,7 @@ export default function WelcomeLoader({ onComplete }: { onComplete: () => void }
               <span
                 key={`r1-${i}`}
                 ref={(el) => { chars1Refs.current[i] = el; }}
-                className="absolute top-1/2 left-1/2 font-black text-[4rem] tracking-tighter text-black uppercase whitespace-nowrap will-change-transform"
+                className="absolute top-1/2 left-1/2 font-black text-[4rem] tracking-tighter text-black uppercase whitespace-nowrap will-change-transform opacity-0"
               >
                 {char === " " ? "\u00A0" : char}
               </span>
@@ -132,7 +132,7 @@ export default function WelcomeLoader({ onComplete }: { onComplete: () => void }
               <span
                 key={`r2-${i}`}
                 ref={(el) => { chars2Refs.current[i] = el; }}
-                className="absolute top-1/2 left-1/2 font-medium text-[1.2rem] tracking-tighter text-black uppercase whitespace-nowrap will-change-transform"
+                className="absolute top-1/2 left-1/2 font-medium text-[1.2rem] tracking-tighter text-black uppercase whitespace-nowrap will-change-transform opacity-0"
               >
                 {char === " " ? "\u00A0" : char}
               </span>
