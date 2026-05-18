@@ -121,7 +121,7 @@ export default function About() {
             {lines.map((line, lineIndex) => (
               <div 
                 key={lineIndex} 
-                className="font-inter font-black text-[7vw] md:text-[5vw] lg:text-[4vw] uppercase relative flex justify-center leading-[1.1] whitespace-nowrap"
+                className="font-inter font-black text-[6.5vw] md:text-[5vw] lg:text-[4vw] uppercase relative flex justify-center leading-[1.2] whitespace-normal md:whitespace-nowrap px-4 md:px-0"
               >
                 {/* 底层阴影 */}
                 <div className="opacity-20 text-[#f7f7f7]" style={{ letterSpacing: '-0.02em' }}>

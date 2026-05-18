@@ -102,7 +102,7 @@ export default function Connect() {
 
       {/* ================= 巨幕姓名区 ================= */}
       <div className="w-full flex justify-center items-end mt-12 md:mt-0 z-10">
-        <h2 ref={nameRef} className="font-inter-black text-[22vw] md:text-[23.5vw] leading-[0.75] tracking-[-0.04em] text-[#111] uppercase select-none whitespace-nowrap">
+        <h2 ref={nameRef} className="font-inter-black text-[15.5vw] md:text-[23.5vw] leading-[0.75] tracking-[-0.04em] text-[#111] uppercase select-none whitespace-nowrap">
           JULIA MA
         </h2>
       </div>

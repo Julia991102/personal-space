@@ -218,7 +218,7 @@ export default function Works() {
 
       <div className="w-full flex flex-col h-full relative z-10">
         <div className="px-8 md:px-16 mb-20 md:mb-24">
-          <h2 className="font-inter-black text-5xl md:text-7xl uppercase text-[#111] tracking-tighter leading-none whitespace-nowrap">SELECTED WORKS</h2>
+        <h2 className="font-inter-black text-[12vw] leading-[0.9] md:text-7xl uppercase text-[#111] tracking-tighter md:leading-none whitespace-normal md:whitespace-nowrap break-words">SELECTED WORKS</h2>
         </div>
         
         <div className="relative w-full">
