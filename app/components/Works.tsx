@@ -18,7 +18,7 @@ const projects = [
     keywords: 'Cross-Border Collaboration, APAC Expansion',
     date: '2025-04',
     images: [
-      '/works/001-1.jpg.png'
+      '/works/001-1.png'
     ],
     desc: 'Serving as the event lead, I managed the end-to-end execution of this high-stakes workshop in collaboration with a Japanese agency to capitalize on high-growth potential within a fast-paced app vertical. I designed a strategic matchmaking component that facilitated deep collaboration among media and entertainment (M&E) partners across the APAC region, delivering an exceptional 4.6/5 average user satisfaction rating.'
   },
@@ -28,12 +28,12 @@ const projects = [
     keywords: 'High-value Partner Retention, Brand Influence',
     date: '2022 — 2025', // 【完美主义微调】：精简长日期，使其在卡片内部保持完美单行，不再臃肿堆叠
     images: [
-      '/works/002-1.jpg.png', '/works/002-2.jpg.png', '/works/002-3.jpg.png',
-      '/works/002-4.jpg.png', '/works/002-5.jpg.png', '/works/002-6.jpg.png',
-      '/works/002-7.jpg.png', '/works/002-8.jpg.png', '/works/002-9.jpg.png',
-      '/works/002-10.jpg.png', '/works/002-11.jpg.png', '/works/002-12.jpg.png',
-      '/works/002-13.jpg.png', '/works/002-14.jpg.png', '/works/002-15.jpg.png',
-      '/works/002-16.jpg.png', '/works/002-17.jpg.png'
+      '/works/002-1.png', '/works/002-2.png', '/works/002-3.png',
+      '/works/002-4.png', '/works/002-5.png', '/works/002-6.png',
+      '/works/002-7.png', '/works/002-8.png', '/works/002-9.png',
+      '/works/002-10.png', '/works/002-11.png', '/works/002-12.png',
+      '/works/002-13.png', '/works/002-14.png', '/works/002-15.png',
+      '/works/002-16.png', '/works/002-17.png'
     ],
     desc: 'Orchestrated the end-to-end management of this flagship annual event series for four consecutive years, leading comprehensive execution across creative brand design, content development, booth production, and complex logistics. By seamlessly integrating high-value industry content, prestigious awarding ceremonies, interactive product showcases, and curated networking environments, the initiative successfully amplified the brand’s market leadership and solidified long-term engagement with key ecosystem partners.'
   },
@@ -43,8 +43,8 @@ const projects = [
     keywords: 'Project Management, Strategic Investment',
     date: '2023-2025',
     images: [
-      '/works/003-1.jpg.png', 
-      '/works/003-2.jpg.png'
+      '/works/003-1.png', 
+      '/works/003-2.png'
     ],
     desc: 'Functioning as the Project Manager, I led the China Immersion Program tailored specifically for global executives. I orchestrated the cross-functional initiative to deliver critical market insights, effectively enabling leadership to make data-driven decisions regarding strategic regional investments.'
   },
@@ -54,9 +54,9 @@ const projects = [
     keywords: 'Integrated Marketing',
     date: '2026-04',
     images: [
-      '/works/004-1.jpg.png', 
-      '/works/004-2.jpg.png', 
-      '/works/004-3.jpg.png'
+      '/works/004-1.png', 
+      '/works/004-2.png', 
+      '/works/004-3.png'
     ],
     desc: 'Leading the ongoing regional marketing for this flagship Google Play Games initiative across the Greater China Region (GCR). Our team orchestrate an integrated campaign combining premium offline partner summits, social media operations, and a localized KOL matrix to drive program awareness and accelerate cross-platform developer acquisition.'
   },
@@ -66,7 +66,7 @@ const projects = [
     keywords: 'Market Research, Interactive Prototyping',
     date: '2022-11',
     images: [
-      '/works/005-1.jpg.png'
+      '/works/005-1.png'
     ],
     desc: 'I spearheaded competitive research into popular Web3 and NFT gaming trends, synthesizing high-level market intelligence into a comprehensive 37-page English analysis report. Furthermore, I partnered directly with the development engineering team to translate these insights into a live, interactive NFT game demo page.'
   }
@@ -79,7 +79,7 @@ const archiveProjects = [
     title: 'Community Events',
     keywords: 'Developer Community',
     date: '2024/2025',
-    images: ['/works/006-1.jpg.png'],
+    images: ['/works/006-1.png'],
     desc: 'Working as the Project Manager, I partnered closely with the Community Lead to organize impact-driven offline events. These initiatives successfully balanced the dual goals of introducing new products and services while strengthening localized community ties, ultimately driving an outstanding product adoption rate of over 80%.'
   },
   {
@@ -87,7 +87,7 @@ const archiveProjects = [
     title: 'Shopify Commerce Next',
     keywords: 'Merchant Acquisition, CXO Networking',
     date: '2025',
-    images: ['/works/007-1.jpg.png'],
+    images: ['/works/007-1.png'],
     desc: 'Serving as Co-Manager, I helped orchestrate a high-impact, 200-attendee in-real-life (IRL) merchant acquisition event designed to accelerate market growth. The project featured strategic stage programming, interactive product showcases, and exclusive CXO networking sessions that successfully expanded the platform commercial footprint.'
   },
   {
@@ -95,7 +95,7 @@ const archiveProjects = [
     title: 'Series Webinar',
     keywords: 'Policy Education, Feature Adoption',
     date: '2022-2026',
-    images: ['/works/008-1.jpg.png'],
+    images: ['/works/008-1.png'],
     desc: 'Organized a recurring series of digital webinars annually to drive developer enablement and ecosystem growth. I oversaw the complete operational workflow to reach over 2,000 cumulative attendees, successfully accelerating platform policy education and new feature promotion across the region.'
   },
   {
@@ -103,7 +103,7 @@ const archiveProjects = [
     title: 'WeChat Operation',
     keywords: 'Content Operations',
     date: '2022',
-    images: ['/works/009-1.jpg.png'],
+    images: ['/works/009-1.png'],
     desc: 'I supported the end-to-end operation of a prominent Android-focused WeChat Official Account. My contributions focused on technical article editing, and managing daily community engagement to maintain an active, thriving developer ecosystem.'
   },
 ];
