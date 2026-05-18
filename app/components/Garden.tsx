@@ -154,7 +154,7 @@ export default function Garden() {
     <section ref={containerRef} className="relative w-full bg-[#050505] text-[#F7F7F7] overflow-hidden">
       
       <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;700;900&display=swap');
         
         .garden-noise {
           position: absolute;

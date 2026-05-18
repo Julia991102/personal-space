@@ -36,7 +36,7 @@ export default function Connect() {
   return (
     <section id="connect" ref={containerRef} className="relative z-20 w-full min-h-screen bg-[#F7F7F7] text-[#111] flex flex-col justify-between pt-40 md:pt-48 pb-6 px-6 md:px-12 overflow-hidden">
       <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;700;900&display=swap');
         .font-inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
       `}} />
 

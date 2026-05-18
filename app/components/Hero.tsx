@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 // 终极精调微雕猫咪：耳朵变钝且分开，胡须变短变细，完美匹配原字体比例
 const CatDotIcon = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 100 100" overflow="visible" className={className}>
@@ -55,7 +55,7 @@ export default function Hero() {
     <>
       <style dangerouslySetInnerHTML={{__html: `
         /* 强力注入 Bodoni (衬线)、Space Mono (等宽) 和 Inter:wght@900 (重型无衬线) */
-        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400&family=Inter:wght@900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+        @import url('https://fonts.loli.net/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400&family=Inter:wght@900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
         .font-bodoni { font-family: 'Bodoni Moda', serif; }
         .font-space { font-family: 'Space Mono', monospace; }
         .font-inter { font-family: 'Inter', sans-serif; }
@@ -73,11 +73,14 @@ export default function Hero() {
 
         {/* ================= 2. 解构版人像 ================= */}
         <div className="absolute left-[10%] lg:left-[25%] top-[23%] lg:top-[26%] w-[65%] md:w-[40%] lg:w-[26%] h-[55vh] lg:h-[65vh] z-10">
-          <img 
+        <Image 
             src="/portfolio.jpg" 
             alt="Julia Ma" 
-            className="w-full h-full object-cover grayscale contrast-[1.2] brightness-90 shadow-2xl"
-          />
+            fill
+            priority // 最高优先级加载，消灭首屏白屏
+            sizes="(max-width: 768px) 65vw, (max-width: 1024px) 40vw, 26vw" // 告诉浏览器不同屏幕下的图片缩放尺寸，加载速度再提速
+            className="object-cover grayscale contrast-[1.2] brightness-90 shadow-2xl"
+        />
         </div>
 
         {/* ================= 3. 巨型解构文本 ================= */}

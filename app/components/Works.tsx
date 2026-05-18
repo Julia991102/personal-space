@@ -206,7 +206,7 @@ export default function Works() {
   return (
     <section ref={containerRef} className="relative z-20 w-full min-h-screen bg-[#F7F7F7] text-[#111] overflow-hidden pt-36 md:pt-48 pb-16 flex flex-col justify-start">
       <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;700;900&display=swap');
         .font-inter-light { font-family: 'Inter', sans-serif; font-weight: 300; }
         .font-inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
         .vinyl-grooves { background-color: #050505; background-image: repeating-radial-gradient(#050505, #050505 2px, #111 3px, #111 4px); box-shadow: inset 0 0 15px rgba(255,255,255,0.05); }
