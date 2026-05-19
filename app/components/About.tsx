@@ -94,9 +94,6 @@ export default function About() {
 
   return (
     <section ref={containerRef} className="w-full bg-[#f7f7f7] overflow-hidden z-0 relative">
-      <style dangerouslySetInnerHTML={{__html: `
-        .font-inter { font-family: 'Inter', sans-serif; }
-      `}} />
 
       {/* 第一屏：白屏 */}
       <div className="title-section relative w-full h-[45vh] bg-[#f7f7f7] flex items-center justify-center pt-[5vh]">

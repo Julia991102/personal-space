@@ -53,17 +53,6 @@ const CatDotIcon = ({ className }: { className?: string }) => (
 export default function Hero() {
   return (
     <>
-      <style dangerouslySetInnerHTML={{__html: `
-        /* 强力注入 Bodoni (衬线)、Space Mono (等宽) 和 Inter:wght@900 (重型无衬线) */
-        .font-bodoni { font-family: 'Bodoni Moda', serif; }
-        .font-space { font-family: 'Space Mono', monospace; }
-        .font-inter { font-family: 'Inter', sans-serif; }
-        /* 粗野主义：镂空描边字 */
-        .text-outline { 
-          -webkit-text-stroke: 2px #111; 
-          color: transparent; 
-        }
-      `}} />
 
       {/* 高级灰白背景 bg-[#f7f7f7] */}
       <section className="relative w-full h-screen min-h-[700px] bg-[#f7f7f7] text-[#111] overflow-hidden selection:bg-[#111] selection:text-[#f7f7f7] z-10 px-4 pt-28 pb-4">

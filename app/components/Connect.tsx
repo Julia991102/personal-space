@@ -35,10 +35,6 @@ export default function Connect() {
 
   return (
     <section id="connect" ref={containerRef} className="relative z-20 w-full min-h-screen bg-[#F7F7F7] text-[#111] flex flex-col justify-between pt-40 md:pt-48 pb-6 px-6 md:px-12 overflow-hidden">
-      <style dangerouslySetInnerHTML={{__html: `
-        .font-inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
-      `}} />
-
       {/* ================= 顶部网格区 ================= */}
       <div ref={topRef} className="flex flex-col md:flex-row justify-between items-start w-full gap-16 md:gap-8 z-10 flex-grow">
         

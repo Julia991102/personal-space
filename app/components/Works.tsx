@@ -212,15 +212,6 @@ export default function Works() {
   }, [selectedProject]);
   return (
     <section id="works" ref={containerRef} className={`relative w-full min-h-screen bg-[#F7F7F7] text-[#111] overflow-hidden pt-36 md:pt-48 pb-40 md:pb-56 flex flex-col justify-start ${selectedProject ? 'z-[999]' : 'z-20'}`}>
-      <style dangerouslySetInnerHTML={{__html: `
-        .font-inter-light { font-family: 'Inter', sans-serif; font-weight: 300; }
-        .font-inter-black { font-family: 'Inter', sans-serif; font-weight: 900; }
-        .vinyl-grooves { background-color: #050505; background-image: repeating-radial-gradient(#050505, #050505 2px, #111 3px, #111 4px); box-shadow: inset 0 0 15px rgba(255,255,255,0.05); }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        @keyframes modalFadeIn { from { opacity: 0; backdrop-filter: blur(0px); } to { opacity: 1; backdrop-filter: blur(8px); } }
-        .animate-modal { animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-      `}} />
 
       <div className="w-full flex flex-col h-full relative z-10">
         <div className="px-8 md:px-16 mb-20 md:mb-24">
