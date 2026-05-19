@@ -211,7 +211,7 @@ export default function Works() {
     return () => { document.body.style.overflow = 'auto'; }; // 组件卸载时恢复原状
   }, [selectedProject]);
   return (
-    <section id="works" ref={containerRef} className={`relative w-full min-h-screen bg-[#F7F7F7] text-[#111] overflow-hidden pt-36 md:pt-48 pb-16 flex flex-col justify-start ${selectedProject ? 'z-[999]' : 'z-20'}`}>
+    <section id="works" ref={containerRef} className={`relative w-full min-h-screen bg-[#F7F7F7] text-[#111] overflow-hidden pt-36 md:pt-48 pb-40 md:pb-56 flex flex-col justify-start ${selectedProject ? 'z-[999]' : 'z-20'}`}>
       <style dangerouslySetInnerHTML={{__html: `
         @import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;700;900&display=swap');
         .font-inter-light { font-family: 'Inter', sans-serif; font-weight: 300; }
