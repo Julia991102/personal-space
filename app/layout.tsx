@@ -1,29 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
-
-// 1. 在 Vercel 打包时提前下载字体，彻底告别外部请求
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-space",
-  display: "swap",
-});
-
-const bodoniModa = Bodoni_Moda({
-  subsets: ["latin"],
-  weight: ["400", "900"],
-  style: ["normal", "italic"],
-  variable: "--font-bodoni",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Julia Ma | Portfolio",
@@ -37,8 +13,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/* 2. 将字体的 CSS 变量直接注入到 body，全局生效 */}
-      <body className={`${inter.variable} ${spaceMono.variable} ${bodoniModa.variable} antialiased`}>
+      <head>
+        {/* 1. 预连接字体服务器，提速加载 */}
+        <link rel="preconnect" href="https://fonts.geekzu.org" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* 2. 引入全量含可变轴参数的艺术字体包（国内极速响应，绝不阻塞首屏渲染） */}
+        <link 
+          href="https://fonts.geekzu.org/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400&family=Inter:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" 
+          rel="stylesheet" 
+        />
+      </head>
+      <body className="antialiased">
         {children}
       </body>
     </html>

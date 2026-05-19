@@ -1,34 +1,43 @@
-/* 1. 彻底删除外部字体 @import，直接引入 Tailwind 核心 */
+/* 1. 引入 Tailwind v4 核心引擎 */
 @import "tailwindcss";
 
-/* 2. 告诉 Tailwind v4 使用 layout.tsx 里注入的本地字体变量 */
-@theme {
-  --font-inter: var(--font-inter);
-  --font-space: var(--font-space);
-  --font-bodoni: var(--font-bodoni);
-}
-
 /* ==========================================================================
-   3. 纯 CSS 终极样式表（完美继承你的所有自定义样式）
+   2. 纯 CSS 绝对锁死：100% 规避 Tailwind v4 编译拦截，强制恢复所有艺术字体
    ========================================================================== */
 
+.font-inter {
+  font-family: 'Inter', sans-serif !important;
+}
+
+.font-space {
+  font-family: 'Space Mono', monospace !important;
+}
+
+.font-bodoni {
+  font-family: 'Bodoni Moda', serif !important;
+}
+
 .font-inter-black {
-  font-family: var(--font-inter) !important;
+  font-family: 'Inter', sans-serif !important;
   font-weight: 900 !important;
 }
 
 .font-inter-light {
-  font-family: var(--font-inter) !important;
+  font-family: 'Inter', sans-serif !important;
   font-weight: 300 !important;
 }
 
-/* 镂空字特效 */
+/* ==========================================================================
+   3. 核心视觉特效组件收编
+   ========================================================================== */
+
+/* Hero 页镂空字 */
 .text-outline {
   -webkit-text-stroke: 2px #111 !important;
   color: transparent !important;
 }
 
-/* 隐藏滚动条 */
+/* 全局隐藏滚动条 */
 .hide-scrollbar::-webkit-scrollbar {
   display: none !important;
 }
@@ -37,14 +46,14 @@
   scrollbar-width: none !important;
 }
 
-/* 黑胶唱片纹理 */
+/* Works 页黑胶纹路 */
 .vinyl-grooves {
   background-color: #050505 !important;
   background-image: repeating-radial-gradient(#050505, #050505 2px, #111 3px, #111 4px) !important;
   box-shadow: inset 0 0 15px rgba(255,255,255,0.05) !important;
 }
 
-/* 弹窗动画 */
+/* Works 弹窗动画 */
 @keyframes modalFadeIn {
   from { opacity: 0; backdrop-filter: blur(0px); }
   to { opacity: 1; backdrop-filter: blur(8px); }
@@ -53,7 +62,7 @@
   animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
 }
 
-/* Garden 胶片薄雾（无密集恐惧感） */
+/* Garden 页高级全息噪点（薄雾胶片颗粒，无密集恐惧） */
 .garden-noise {
   position: absolute !important;
   inset: 0 !important;

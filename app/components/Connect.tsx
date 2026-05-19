@@ -40,7 +40,7 @@ export default function Connect() {
           
           <div className="font-mono text-[11px] leading-[2] uppercase tracking-[0.1em] opacity-60 max-w-[320px]">
             <p className="mb-4">
-              With 5 years of experience in marketing, I've successfully managed over 30+ end-to-end projects, including flagship events with budgets up to $350,000.
+              With 5 years of experience in marketing, I've successfully managed over 30+ end-to-end projects, including flagship events with budgets up to $400,000.
             </p>
             <p>
               I consistently achieve a 100% completion rate.
