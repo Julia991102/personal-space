@@ -59,11 +59,13 @@
 }
 
 /* Garden 页的背景噪点 */
+/* Garden 页的背景噪点（修复密集恐惧症版：薄雾胶片颗粒感） */
 @utility garden-noise {
   position: absolute;
   inset: 0;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.025; /* 核心1：把透明度从0.04降到0.025，极其轻柔 */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); 
+  /* 核心2：baseFrequency 提升到 1.5，变成细腻的粉末；numOctaves 降到 2，去除刺眼的锐化细节 */
   pointer-events: none;
   z-index: 1;
 }
