@@ -1,24 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Space_Mono, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// 1. 在 Vercel 打包时提前下载字体，彻底告别外部请求
+const inter = Inter({
   subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space",
+  display: "swap",
 });
 
-export const metadata = {
-  title: "Julia Ma",
-  description: "Welcome to my personal space!",
-  icons: {
-    // 顺便教你一个魔法：用 Emoji 作为网页左上角的图标！
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>",
-  },
+const bodoniModa = Bodoni_Moda({
+  subsets: ["latin"],
+  weight: ["400", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-bodoni",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "Julia Ma | Portfolio",
+  description: "Personal Portfolio of Julia Ma",
 };
 
 export default function RootLayout({
@@ -27,11 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en">
+      {/* 2. 将字体的 CSS 变量直接注入到 body，全局生效 */}
+      <body className={`${inter.variable} ${spaceMono.variable} ${bodoniModa.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
