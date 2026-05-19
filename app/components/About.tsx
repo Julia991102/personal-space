@@ -95,7 +95,6 @@ export default function About() {
   return (
     <section ref={containerRef} className="w-full bg-[#f7f7f7] overflow-hidden z-0 relative">
       <style dangerouslySetInnerHTML={{__html: `
-        @import url('https://fonts.loli.net/css2?family=Inter:wght@900&display=swap');
         .font-inter { font-family: 'Inter', sans-serif; }
       `}} />
 

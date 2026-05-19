@@ -55,7 +55,6 @@ export default function Hero() {
     <>
       <style dangerouslySetInnerHTML={{__html: `
         /* 强力注入 Bodoni (衬线)、Space Mono (等宽) 和 Inter:wght@900 (重型无衬线) */
-        @import url('https://fonts.loli.net/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400&family=Inter:wght@900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
         .font-bodoni { font-family: 'Bodoni Moda', serif; }
         .font-space { font-family: 'Space Mono', monospace; }
         .font-inter { font-family: 'Inter', sans-serif; }

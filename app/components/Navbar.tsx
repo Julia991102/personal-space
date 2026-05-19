@@ -38,15 +38,15 @@ export default function Navbar({
             // 核心修复 2：将 offsetY 改为 0。因为你的组件内部已经带有了 pt-36/pt-48 的安全边距，
             // 设为 0 能让下一屏的背景色直接顶天，彻底消除上一屏遗留的黑边/杂色。
             gsap.to(window, {
-              duration: 0.8,
+              duration: 0.5,
               scrollTo: {
                 y: element,
                 offsetY: 0
               },
-              ease: "power3.inOut"
+              ease: "power3.Out"
             });
           } else if (elementId === 'home') {
-            gsap.to(window, { duration: 0.8, scrollTo: 0, ease: "power3.inOut" });
+            gsap.to(window, { duration: 0.5, scrollTo: 0, ease: "power3.Out" });
           }
         }}
         className="group flex items-center justify-center cursor-pointer flex-shrink-0"
@@ -82,7 +82,7 @@ export default function Navbar({
           <button 
             onClick={() => {
               onNavigate('home');
-              gsap.to(window, { duration: 0.8, scrollTo: 0, ease: "power3.inOut" });
+              gsap.to(window, { duration: 0.5, scrollTo: 0, ease: "power3.Out" });
             }} 
             className="group"
           >

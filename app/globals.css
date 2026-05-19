@@ -1,4 +1,6 @@
-/* 1. 引入 Tailwind v4 核心引擎 */
+/* 1. 全局字体镜像加速 (必须在第 1 行) */
+@import url('https://fonts.loli.net/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,900;1,6..96,400&family=Inter:wght@300;400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+/* 2. 引入 Tailwind v4 核心引擎 (必须紧跟在字体后面) */
 @import "tailwindcss";
 
 :root {
