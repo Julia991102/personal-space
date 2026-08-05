@@ -63,7 +63,7 @@ export default function Hero() {
         <div className="absolute left-[10%] lg:left-[25%] top-[23%] lg:top-[26%] w-[65%] md:w-[40%] lg:w-[26%] h-[55vh] lg:h-[65vh] z-10">
         <Image 
             src="/portfolio.jpg" 
-            alt="Julia Ma" 
+            alt="Sonia Ma" 
             fill
             priority // 最高优先级加载，消灭首屏白屏
             sizes="(max-width: 768px) 65vw, (max-width: 1024px) 40vw, 26vw" // 告诉浏览器不同屏幕下的图片缩放尺寸，加载速度再提速
@@ -72,9 +72,9 @@ export default function Hero() {
         </div>
 
         {/* ================= 3. 巨型解构文本 ================= */}
-        {/* JULIA */}
+        {/* SONIA */}
         <h1 className="absolute top-[8%] left-[2%] lg:left-[8%] text-[25vw] lg:text-[18vw] font-bodoni font-black leading-none uppercase tracking-tighter mix-blend-difference text-white z-20 pointer-events-none">
-          JULIA
+          SONIA
         </h1>
 
         {/* MA. (极致排版修复版) */}

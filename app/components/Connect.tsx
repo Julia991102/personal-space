@@ -67,8 +67,8 @@ export default function Connect() {
           <a href="tel:+8617852843329" className="font-inter-black text-[10vw] md:text-[5.5vw] leading-[0.9] tracking-tighter hover:opacity-50 transition-opacity whitespace-nowrap">
             +86 178 5284 3329
           </a>
-          <a href="mailto:julia.ma991102@gmail.com" className="font-inter-black text-[6.5vw] md:text-[3.5vw] leading-[1.2] tracking-tighter hover:opacity-50 transition-opacity whitespace-nowrap mt-1 md:mt-2">
-            julia.ma991102@gmail.com
+          <a href="mailto:jma1999112@gmail.com" className="font-inter-black text-[6.5vw] md:text-[3.5vw] leading-[1.2] tracking-tighter hover:opacity-50 transition-opacity whitespace-nowrap mt-1 md:mt-2">
+          jma1999112@gmail.com
           </a>
 
           <div className="flex flex-wrap gap-8 md:gap-12 mt-8 font-mono text-[11px] tracking-[0.2em] uppercase font-bold">
@@ -84,7 +84,7 @@ export default function Connect() {
 
       <div className="w-full flex justify-center items-end mt-12 md:mt-0 z-10">
         <h2 ref={nameRef} className="font-inter-black text-[15.5vw] md:text-[23.5vw] leading-[0.75] tracking-[-0.04em] text-[#111] uppercase select-none whitespace-nowrap">
-          JULIA MA
+          SONIA MA
         </h2>
       </div>
 
@@ -92,7 +92,7 @@ export default function Connect() {
         <span className="mb-2 md:mb-0">BEIJING, CHINA: (UTC+8)</span>
         <span className="mb-2 md:mb-0 hidden md:block tracking-[0.3em]">DEVELOPMENT - VIBE CODING</span>
         <span className="text-left md:text-right leading-[1.5]">
-          2026 All Right Reserved. Julia Ma.<br/>
+          2026 All Right Reserved. Sonia Ma.<br/>
           Any Reproduction Without Permission Is Prohibited.
         </span>
       </div>

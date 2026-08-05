@@ -1,6 +1,6 @@
 export const SITE_DATA = {
     profile: {
-      name: "Julia Ma",
+      name: "Sonia Ma",
       role: "Marketing Manager",
       bio: "Strategy. Insights. Code. Always learning, always building, always moving forward.",
       email: "your.email@example.com", // 替换为你的邮箱

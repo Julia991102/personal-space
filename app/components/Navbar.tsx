@@ -87,7 +87,7 @@ export default function Navbar({
             className="group"
           >
             <span className="font-black text-lg md:text-xl tracking-[0.2em] text-white hover:opacity-60 transition-opacity uppercase whitespace-nowrap">
-              Julia Ma
+              Sonia Ma
             </span>
           </button>
         </div>
